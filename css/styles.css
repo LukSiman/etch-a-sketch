@@ -21,11 +21,18 @@ html {
 ID SELECTORS 
 **********************************************/
 
+#container{
+  display: grid;
+  grid-template: repeat(16, 30px) / repeat(16, 30px);
+}
 
 /**********************************************
 CLASS SELECTORS
 **********************************************/
 
+.squares{
+  border: 1px solid black;
+}
 
 /**********************************************
 MEDIA 
