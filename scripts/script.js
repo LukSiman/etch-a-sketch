@@ -4,6 +4,9 @@ const gridSize = 480; // total grid size width and height in px
 const maximumSquares = 64; // maximum of allowed squares per side
 const initialSize = 16; // initial square amount for a side ofthe grid
 
+const colorButton = document.querySelector('#changeColor');
+let colorChanged = false;
+
 makeGrid(initialSize); // initial grid
 
 // creates a grid of required size
@@ -18,6 +21,9 @@ function makeGrid(size) {
         container.appendChild(div);
     }
 
+    colorButton.textContent = 'Rainbow';
+    colorChanged = false;
+    
     paintSquares();
 }
 
@@ -71,9 +77,6 @@ function randomRGB() {
 
     return `rgb(${red}, ${green}, ${blue})`;
 }
-
-const colorButton = document.querySelector('#changeColor');
-let colorChanged = false;
 
 // changes the color
 colorButton.addEventListener('click', () => {
